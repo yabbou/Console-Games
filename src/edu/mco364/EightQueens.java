@@ -68,10 +68,7 @@ public class EightQueens {
             for (int col = 0; col < SIZE; col++) {
 
                 String cellDivider = "|";
-                if (board[row][col] == isQueen) {
-                    displayBoard.append(" Q ").append(cellDivider);
-                } else
-                    displayBoard.append("   ").append(cellDivider);
+                displayBoard.append((board[row][col] == isQueen)? " Q " : "   " ).append(cellDivider);
             }
 
             String rowDivider = new String(new char[SIZE]).replace("\0", "---+");
